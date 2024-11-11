@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Widget Test</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <script>
+      (function (d, t) {
+        var BASE_URL = "https://audiodev.dahreply.ai/";
+        var g = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+        g.src = BASE_URL + "/packs/js/sdk.js";
+        g.defer = true;
+        g.async = true;
+        s.parentNode.insertBefore(g, s);
+        g.onload = function () {
+          window.chatwootSDK.run({
+            websiteToken: "5HDjsvFUHnQZYGYpTaZzAF17",
+            baseUrl: BASE_URL,
+          });
+        };
+      })(document, "script");
+    </script>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
